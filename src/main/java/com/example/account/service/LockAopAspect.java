@@ -1,7 +1,6 @@
-package com.example.account.repository;
+package com.example.account.service;
 
 import com.example.account.aop.AccountLockIdInterface;
-import com.example.account.service.LockService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -33,4 +32,5 @@ public class LockAopAspect {
             lockService.unlock(request.getAccountNumber());
         }
     }
+
 }
